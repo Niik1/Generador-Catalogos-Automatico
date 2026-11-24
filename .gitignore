@@ -1,0 +1,21 @@
+# Entorno virtual
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Secretos y variables de entorno locales
+.env
+.streamlit/secrets.toml
+
+# Archivos temporales o generados
+*.pdf
+*.xlsx
+*.csv
+/content/
+
+# Logs y SO
+.DS_Store
+Thumbs.db
+*.log
