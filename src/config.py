@@ -25,13 +25,13 @@ def get_secret(key: str, default: Any = None) -> Any:
 
     return os.environ.get(key, default)
 
-# Configuración por defecto de Google Sheets
-DEFAULT_GSHEET_URL = "https://docs.google.com/spreadsheets/d/1ZwDMtvPPMYiEzbtMxOmtsC7XWb2c01lLqGxqmhxM2P4/edit"
+# Configuración por defecto (valores genéricos para el repositorio público)
+DEFAULT_GSHEET_URL = ""
 DEFAULT_SHEET_NAME = "CATALOGO"
-DEFAULT_DROPBOX_ROOT = "/DISEÑO GRAFICO/GAME CENTER/SKUs/SKUs"
-DEFAULT_EXPECTED_EMAIL = "gamecentersac@gmail.com"
+DEFAULT_DROPBOX_ROOT = "/SKUs"
+DEFAULT_EXPECTED_EMAIL = ""
 
-DEFAULT_COL_SKU = "SKU GC"
+DEFAULT_COL_SKU = "SKU"
 DEFAULT_COL_NAME = "Name"
-DEFAULT_COL_PRICE = "Costo USD"
+DEFAULT_COL_PRICE = "Price"
 DEFAULT_COL_EXTRA = "Marca"

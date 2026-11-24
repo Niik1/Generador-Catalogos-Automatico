@@ -41,18 +41,18 @@ import gspread
 import dropbox
 
 # ----------------- CONFIG EDITABLE -----------------
-GSHEET_URL   = "https://docs.google.com/spreadsheets/d/1ZwDMtvPPMYiEzbtMxOmtsC7XWb2c01lLqGxqmhxM2P4/edit"
+GSHEET_URL   = "https://docs.google.com/spreadsheets/d/TU_SHEET_ID/edit"
 SHEET_NAME   = "CATALOGO"
 
-DROPBOX_ROOT = "/DISEÑO GRAFICO/GAME CENTER/SKUs/SKUs"
+DROPBOX_ROOT = "/SKUs"
 OUT_XLSX     = "/content/CatalogoPEND.xlsx"
 OUT_PDF      = "/content/CatalogoPEND.pdf"
 
 THUMB_W, THUMB_H = 180, 180
-EXPECTED_DROPBOX_EMAIL = "gamecentersac@gmail.com"
+EXPECTED_DROPBOX_EMAIL = "tu_email@ejemplo.com"
 DEBUG = False
 # Nombres de las columnas en tu hoja (no importa mayúsculas/minúsculas).
-COL_SKU   = "SKU GC"
+COL_SKU   = "SKU"
 COL_NAME  = "Name"
 COL_PRICE = "Costo USD"
 COL_EXTRA = "Marca"   # opcional: categoría o marca. Déjalo "" si no existe.

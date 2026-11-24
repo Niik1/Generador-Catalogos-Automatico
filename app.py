@@ -69,7 +69,7 @@ with st.sidebar:
         grid_cols = st.selectbox("Productos por fila:", [2, 3, 4], index=1)
         
     title = st.text_input("Título del catálogo:", value="Catálogo de Productos")
-    subtitle = st.text_input("Subtítulo:", value="Game Center SAC")
+    subtitle = st.text_input("Subtítulo:", value="Catálogo Oficial")
     currency = st.text_input("Moneda:", value="USD", help="Símbolo o código: USD, S/, $, €")
     
     col_opt1, col_opt2 = st.columns(2)
