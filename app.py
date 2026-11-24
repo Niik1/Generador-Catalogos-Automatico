@@ -83,18 +83,19 @@ with st.sidebar:
     st.markdown("---")
     st.header("⚙️ Fuente de Datos")
     
+    # Parámetros de conexión leídos exclusivamente de forma interna (privada)
+    gsheet_url = get_secret("GSHEET_URL", DEFAULT_GSHEET_URL)
+    sheet_name = get_secret("SHEET_NAME", DEFAULT_SHEET_NAME)
+    dropbox_root = get_secret("DROPBOX_ROOT", DEFAULT_DROPBOX_ROOT)
+    expected_email = get_secret("EXPECTED_DROPBOX_EMAIL", DEFAULT_EXPECTED_EMAIL)
+
+    default_mode_idx = 0 if gsheet_url else 1
     source_mode = st.radio(
         "Modo de catálogo:",
-        ["Google Sheets (Conexión Real)", "Modo Demo (5 Productos de Prueba)"],
-        index=0,
-        help="El modo demo permite probar la generación sin credenciales activas de Google Sheets."
+        ["Base de Datos Conectada", "Modo Demo (5 Productos de Prueba)"],
+        index=default_mode_idx,
+        help="El modo demo permite probar la generación inmediatamente sin requerir bases de datos externas."
     )
-    
-    with st.expander("Parámetros avanzados de conexión"):
-        gsheet_url = st.text_input("Google Sheet URL:", value=get_secret("GSHEET_URL", DEFAULT_GSHEET_URL))
-        sheet_name = st.text_input("Nombre de la Hoja:", value=get_secret("SHEET_NAME", DEFAULT_SHEET_NAME))
-        dropbox_root = st.text_input("Ruta raíz Dropbox:", value=get_secret("DROPBOX_ROOT", DEFAULT_DROPBOX_ROOT))
-        expected_email = st.text_input("Email esperado Dropbox:", value=get_secret("EXPECTED_DROPBOX_EMAIL", DEFAULT_EXPECTED_EMAIL))
 
 # ----------------- ÁREA PRINCIPAL: CARGA DE ARCHIVO -----------------
 tab_main, tab_about = st.tabs(["🚀 Generador", "ℹ️ Arquitectura & Documentación"])
@@ -177,6 +178,11 @@ with tab_main:
                 if not skus_list:
                     skus_list = list(df_cat["SKU GC"])
             else:
+                if not gsheet_url:
+                    raise RuntimeError(
+                        "No se ha configurado la variable GSHEET_URL en las variables de entorno o secretos del servidor. "
+                        "Para probar la aplicación inmediatamente, selecciona 'Modo Demo (5 Productos de Prueba)' en la barra lateral."
+                    )
                 # Intentar lectura pública/export o service account
                 df_cat = read_gsheet_public_or_export(gsheet_url, sheet_name)
                 
