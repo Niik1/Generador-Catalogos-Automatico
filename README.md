@@ -29,6 +29,19 @@
 
 ---
 
+## 🛠️ Stack Tecnológico
+
+| Capa | Tecnología |
+| :--- | :--- |
+| **Frontend / Interfaz** | [Streamlit](https://streamlit.io/) |
+| **Lenguaje Core** | Python 3.10+ |
+| **APIs de Integración** | Dropbox API v2 (`dropbox`), Google Sheets (`gspread`, `google-auth`) |
+| **Procesamiento de Imágenes** | [Pillow (PIL)](https://python-pillow.org/) |
+| **Generación de Documentos** | [ReportLab](https://www.reportlab.com/) (PDFs), [openpyxl](https://openpyxl.readthedocs.io/) (XLSX) |
+| **Gestión de Datos** | [Pandas](https://pandas.pydata.org/) |
+
+---
+
 ## 🏗️ Arquitectura del Sistema
 
 ```mermaid
@@ -72,19 +85,6 @@ flowchart TD
   * Compatibilidad con colores corporativos personalizados (`HexColor`).
 * **Excel con Imágenes Reales Embebidas (`openpyxl`):**
   * Inserción y redimensionado proporcional de fotografías dentro de las celdas.
-
----
-
-## 🛠️ Stack Tecnológico
-
-| Capa | Tecnología |
-| :--- | :--- |
-| **Frontend / Interfaz** | [Streamlit](https://streamlit.io/) |
-| **Lenguaje Core** | Python 3.10+ |
-| **APIs de Integración** | Dropbox API v2 (`dropbox`), Google Sheets (`gspread`, `google-auth`) |
-| **Procesamiento de Imágenes** | [Pillow (PIL)](https://python-pillow.org/) |
-| **Generación de Documentos** | [ReportLab](https://www.reportlab.com/) (PDFs), [openpyxl](https://openpyxl.readthedocs.io/) (XLSX) |
-| **Gestión de Datos** | [Pandas](https://pandas.pydata.org/) |
 
 ---
 
