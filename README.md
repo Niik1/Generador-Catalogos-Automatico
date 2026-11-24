@@ -45,6 +45,18 @@ flowchart TD
 
 ---
 
+## 📸 Demostración Visual
+
+### 💻 Interfaz Web de la Aplicación
+![Vista previa de la aplicación](assets/app-preview.png)
+
+### 📄 Resultados Generados (PDF & Excel)
+| Catálogo en PDF Vectorial | Libro Excel con Fotos Embebidas |
+| :---: | :---: |
+| ![Catálogo PDF](assets/pdf-sample.png) | ![Catálogo Excel](assets/excel-sample.png) |
+
+---
+
 ## ✨ Características Principales
 
 * **Doble Plantilla Dinámica:**
