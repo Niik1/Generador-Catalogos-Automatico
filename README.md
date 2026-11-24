@@ -17,6 +17,18 @@
 
 ---
 
+## 📸 Demostración Visual
+
+### 💻 Interfaz Web de la Aplicación
+![Vista previa de la aplicación](assets/app-preview.png)
+
+### 📄 Resultados Generados (PDF & Excel)
+| Catálogo en PDF Vectorial | Libro Excel con Fotos Embebidas |
+| :---: | :---: |
+| ![Catálogo PDF](assets/pdf-sample.png) | ![Catálogo Excel](assets/excel-sample.png) |
+
+---
+
 ## 🏗️ Arquitectura del Sistema
 
 ```mermaid
@@ -42,19 +54,6 @@ flowchart TD
     Motores -->|4. Compilación en memoria| UI
     UI -->|5. Descarga directa| Out[📄 PDF Vectorial & 📊 Libro Excel]
 ```
-
----
-
-## 📸 Demostración Visual
-
-### 💻 Interfaz Web de la Aplicación
-![Vista previa de la aplicación](assets/app-preview.png)
-
-### 📄 Resultados Generados (PDF & Excel)
-| Catálogo en PDF Vectorial | Libro Excel con Fotos Embebidas |
-| :---: | :---: |
-| ![Catálogo PDF](assets/pdf-sample.png) | ![Catálogo Excel](assets/excel-sample.png) |
-
 ---
 
 ## ✨ Características Principales
@@ -86,45 +85,6 @@ flowchart TD
 | **Procesamiento de Imágenes** | [Pillow (PIL)](https://python-pillow.org/) |
 | **Generación de Documentos** | [ReportLab](https://www.reportlab.com/) (PDFs), [openpyxl](https://openpyxl.readthedocs.io/) (XLSX) |
 | **Gestión de Datos** | [Pandas](https://pandas.pydata.org/) |
-
----
-
-## 🚀 Instalación y Uso Local
-
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/tu-usuario/generador-catalogos.git
-cd generador-catalogos
-```
-
-### 2. Crear y activar entorno virtual
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Linux / macOS
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Instalar dependencias
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Configurar variables de entorno
-Crea un archivo `.env` basándote en el ejemplo proporcionado:
-```bash
-cp .env.example .env
-```
-Edita `.env` con tus credenciales de Dropbox y Google Sheets.
-
-### 5. Ejecutar la aplicación
-```bash
-streamlit run app.py
-```
-Abre tu navegador en `http://localhost:8501`.
 
 ---
 
